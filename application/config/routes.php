@@ -8,6 +8,15 @@ $route['default_controller'] = "portada/portada_controlador";
 $route['login'] = "acceso/login";
 $route['logout'] = "acceso/logout";
 
+//-- EMPRESA
+$route['empresa'] = "empresa/empresa_controlador";
+
+//-- CATEOGORÍA
+$route['categoria'] = "categoria/categoria_controlador";
+
+//-- UBICACIÓN
+$route['ubicacion'] = "ubicacion/ubicacion_controlador";
+
 //--USUARIOS
 $route['usuarios'] = "usuario/usuario_controlador";
 $route['crear-usuario'] = "usuario/usuario_controlador/crear";

@@ -2,14 +2,14 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title><?php echo (isset($titulo) and $titulo != "") ? $titulo . " | " : ""; ?>INEI</title>
+        <title><?php echo (isset($titulo) and $titulo != "") ? $titulo . " | " : ""; ?>Administrador</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <?php echo put_headersCss() ?>
         <script type="text/javascript">
-                var CI = {
-                    'base_url' : '<?php echo base_url(); ?>',
-                    'site_url' : '<?php echo site_url(); ?>'
-                };
+            var CI = {
+                'base_url' : '<?php echo base_url(); ?>',
+                'site_url' : '<?php echo site_url(); ?>'
+            };
         </script>
         <script src="<?php echo base_url('assets/js/jquery.min.js') ?>" ></script>
         <!--[if lt IE 9]>
@@ -35,7 +35,7 @@
         <div class="wrapper">
         <?php if ($this->session->userdata('idUserLogin')) { ?>
             <header class="main-header">
-                <a href="<?php echo base_url() ?>" class="logo">CAPACITACIÓN</a>
+                <a href="<?php echo base_url() ?>" class="logo">TRANSITO</a>
                 <nav class="navbar navbar-static-top" role="navigation">
                     <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"></a>
                     <div class="navbar-custom-menu">
@@ -47,10 +47,10 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="user-header">
-                                        <img src="<?php echo base_url('assets/img/boy.png')?>" class="img-circle" alt="<?php echo $this->session->userdata('userNameUsuario') ?>" />
+                                        <img src="<?php echo base_url('assets/img/boy.png')?>" class="img-circle" alt="<?php echo $this->session->userdata('user') ?>" />
                                         <p>
                                             <?php echo $this->session->userdata('userNameUsuario') ?>
-                                            <small><?php echo $this->session->userdata('userNombreRol') ?></small>
+                                            <small><?php echo $this->session->userdata('userNameRol') ?></small>
                                         </p>
                                     </li>
                                     <li class="user-footer">

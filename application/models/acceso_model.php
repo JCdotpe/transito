@@ -10,32 +10,15 @@ class Acceso_model extends CI_Model {
     }
 
     public function logearme($params) {
-        $query = $this->db->query("EXEC PA_USUARIO_ACCESO '" . $params['sendUser'] . "','" . $params['sendPass'] . "'");
+        $sql = "SELECT * FROM admin 
+                WHERE 
+                    user ='" . $params['sendUser'] . "'
+                    AND pass='" . $params['sendPass'] . "'";
+        $query = $this->db->query($sql);
         if ($query->num_rows() == 1) {
-            return $this->convert_utf8->convert_row($query);
-        } else {
-            return false;
+            return $query->row_array();
         }
-//        $sql = "SELECT 
-//                    usu.*,
-//                    rol.nombre_rol
-//                FROM 
-//                    usuario AS usu 
-//                    LEFT JOIN rol ON usu.id_rol=rol.id_rol
-//                WHERE 
-//                    usu.usuario='" . $params['sendUser'] . "'
-//                    AND usu.clave='" . $params['sendPass'] . "'";
-//        $query = $this->db->query($sql);
-//        if ($query->num_rows() == 1) {
-//            return $query->row_array();
-//        } else {
-//            return false;
-//        }
-    }
-
-    public function logearUserSede($idUsuario) {
-        $sql = "SELECT * FROM usuario_sede WHERE idUsuario='" . $idUsuario . "' ";
-        return $this->db->query($sql)->row_array();
+        return NULL;
     }
 
 }

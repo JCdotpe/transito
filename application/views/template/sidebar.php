@@ -18,19 +18,14 @@ if (!isset($sidebar)) {
                     <a href="<?php echo base_url() ?>"><i class="fa fa-dashboard"></i> <span>Portada</span></a>
                 </li>
                 <li class="treeview">
-                    <a href="<?php echo base_url('cargar-archivo') ?>"><i class="fa fa-cloud-upload"></i> <span>Cargar archivo</span></a>
+                    <a href="<?php echo base_url('empresa') ?>"><i class="fa fa-building-o"></i> <span>Empresa</span></a>
                 </li>
                 <li class="treeview">
-                    <a href="<?php echo base_url('local-de-aplicacion') ?>"><i class="fa fa-building"></i> <span>Local de aplicación</span></a>
+                    <a href="<?php echo base_url('categoria') ?>"><i class="fa fa-cubes"></i> <span>Categoría</span></a>
                 </li>
                 <li class="treeview">
-                    <a href="<?php echo base_url('postulantes') ?>"><i class="fa fa-male"></i> <span>Postulantes</span></a>
+                    <a href="<?php echo base_url('ubicacion') ?>"><i class="fa fa-map-marker"></i> <span>Ubicación</span></a>
                 </li>
-                <?php if ($rol == 1) { ?>
-                    <li class="treeview">
-                        <a href="<?php echo base_url('usuarios') ?>"><i class="fa fa-users"></i> <span>Usuarios</span></a>
-                    </li>
-                <?php } ?>
             </ul>
         </section>
     </aside>

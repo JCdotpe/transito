@@ -16,13 +16,11 @@ class Acceso extends CI_Controller {
             $pass = $this->input->post('sendPass');
             if ($user and $pass) {
                 $check = $this->modeloAcceso->logearme($_REQUEST);
-                if ($check) {
+                if ($check !=NULL) {
                     $datoUser = array(
-                        'idUserLogin' => $check['idUsuario'],
-                        'userNameUsuario' => $check['usuario'],
-                        'userNombreApellido' => $check['nombres_apellidos'],
-                        'userIdRol' => $check['id_rol'],
-                        'userNombreRol' => $check['nombre_rol']
+                        'idUserLogin' => $check['id'],
+                        'userNameUsuario' => $check['user'],
+                        'userNameRol' => $check['rol']
                     );
                     $this->session->set_userdata($datoUser);
                     redirect('', 'refresh');
