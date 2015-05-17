@@ -28,7 +28,15 @@
                         </tr>
                     </tfoot>
                     <tbody class="bodyTablaListado">
-
+                        <?php if(count($empresas)>0){
+                        foreach ($empresas as $empresa) { ?>
+                        <tr>
+                            <td><?php echo $empresa['empresa'] ?></td>
+                            <td class="text-center"><?php echo $empresa['veces_empresa'] ?></td>
+                            <td class="text-center"><i class="fa fa-circle text-danger"></i><?php #echo $empresa['nombre_rol'] ?></td>
+                            
+                        </tr>
+                        <?php } }?>
                     </tbody>
                 </table>
             </div>

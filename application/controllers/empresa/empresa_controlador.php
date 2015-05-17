@@ -21,6 +21,7 @@ class Empresa_controlador extends CI_Controller {
             'facebox/src/facebox',
             'jquery-ui',
             'plugins/iCheck/icheck.min'));
+        $datos['empresas'] = $this->modeloEmpresa->getDataEmpresa();
         $datos['titulo'] = "Reporte por empresa";
         $datos['contenido'] = 'empresa/listado_empresa_vista';
         $this->load->view('plantilla', $datos);

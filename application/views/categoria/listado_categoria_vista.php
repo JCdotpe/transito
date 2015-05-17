@@ -1,5 +1,5 @@
 <section class="content-header">
-    <h1>Listado de total de categoría</h1>
+    <h1>Listado de total de categorías</h1>
     <ol class="breadcrumb">
         <li class=""><a href="<?php echo base_url() ?>"><i class="fa fa-dashboard"></i> Portada</a></li>
         <li class="active">Categoría</li>
@@ -28,7 +28,14 @@
                         </tr>
                     </tfoot>
                     <tbody class="bodyTablaListado">
-
+                        <?php if(count($categorias)>0){
+                        foreach ($categorias as $categoria) { ?>
+                        <tr>
+                            <td><?php echo $categoria['nombre'] ?></td>
+                            <td class="text-center"><?php echo $categoria['veces_categoria'] ?></td>
+                            <td class="text-center"><i class="fa fa-circle text-danger"></i><?php #echo $categoria['nombre_rol'] ?></td>
+                        </tr>
+                        <?php } }?>
                     </tbody>
                 </table>
             </div>

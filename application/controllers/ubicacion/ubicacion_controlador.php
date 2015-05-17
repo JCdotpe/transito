@@ -25,6 +25,12 @@ class Ubicacion_controlador extends CI_Controller {
         $datos['contenido'] = 'ubicacion/listado_ubicacion_vista';
         $this->load->view('plantilla', $datos);
     }
+    
+    public function traer_ubicacion() {
+        $locations = $this->modeloUbicacion->getUbicacion();
+        header('Content-Type: application/json');
+        echo json_encode($locations);
+    }
 
 //    public function crear() {
 //        if (isset($_REQUEST['crearLocal']) and $_REQUEST['valorLocal'] == 'valorCrearLocal') {

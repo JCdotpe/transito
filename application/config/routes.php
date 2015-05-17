@@ -16,6 +16,7 @@ $route['categoria'] = "categoria/categoria_controlador";
 
 //-- UBICACIÓN
 $route['ubicacion'] = "ubicacion/ubicacion_controlador";
+$route['ubicacion_json'] = "ubicacion/ubicacion_controlador/traer_ubicacion";
 
 //--USUARIOS
 $route['usuarios'] = "usuario/usuario_controlador";

@@ -21,6 +21,7 @@ class Categoria_controlador extends CI_Controller {
             'facebox/src/facebox',
             'jquery-ui',
             'plugins/iCheck/icheck.min'));
+        $datos['categorias'] = $this->modeloCategoria->getDataCategoria();
         $datos['titulo'] = "Reporte por Categoría";
         $datos['contenido'] = 'categoria/listado_categoria_vista';
         $this->load->view('plantilla', $datos);
